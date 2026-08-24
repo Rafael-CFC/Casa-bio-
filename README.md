@@ -81,8 +81,8 @@ novo com o mesmo nome** — não precisa mexer no HTML.
 
 | Arquivo | Onde aparece | Situação |
 |---|---|---|
-| `chale-fachada.jpg` | Capa da página do Chalé e card em Projetos | ✅ |
-| `chale-frente.jpg` | Galeria do Chalé e galeria da home | ✅ |
+| `chale-fachada.jpg` | Capa do Chalé, card em Projetos e galeria da home | ✅ |
+| `chale-lateral.jpg` | Galeria do Chalé | ✅ |
 | `chale-sala.jpg` | Galeria do Chalé | ✅ |
 | `chale-estar.jpg` | Galeria do Chalé e galeria da home | ✅ |
 | `chale-quarto.jpg` | Galeria do Chalé | ✅ |
@@ -152,17 +152,26 @@ Produtos de cisterna devem ter também a classe `produto--agua` (deixa o card az
 
 ### 4. Projetos
 
-`projetos.html` lista os seis projetos: Chalé Ecológico, Casa Inspirulina,
-Morada Ekoa, Vivenda Viva, Pergolado de Bambu e Ekoa Surf Camp.
+`projetos.html` lista **só os projetos que já têm foto**. Hoje há um: o
+**Chalé Ecológico**, que serve de modelo para todos os outros.
 
-O **Chalé Ecológico** já tem página própria (`projeto-chale-ecologico.html`),
-com capa, ficha técnica, galeria de cinco fotos e os destaques construtivos.
-Ela serve de modelo para os outros cinco: copie o arquivo, renomeie, troque
-textos e nomes das fotos.
+Ainda por publicar, esperando as fotos:
 
-Em `projetos.html`, um projeto sem página própria é um `<article class="projeto">`
-com ilustração; um projeto com página é um `<a href="..." class="projeto">` com
-foto na capa. Para promover um projeto, siga o padrão do Chalé.
+- Casa Inspirulina
+- Morada Ekoa
+- Vivenda Viva
+- Pergolado de Bambu
+- Ekoa Surf Camp
+
+**Para publicar mais um projeto**, o caminho é sempre o mesmo:
+
+1. Coloque as fotos em `assets/img/` com o prefixo do projeto
+   (`inspirulina-fachada.jpg`, `inspirulina-sala.jpg`…)
+2. Copie `projeto-chale-ecologico.html`, renomeie e troque textos e fotos
+3. Em `projetos.html`, copie o card do Chalé e aponte para a página nova
+
+O card do projeto é um `<a href="..." class="projeto">` com foto na capa —
+o mesmo padrão para todos.
 
 ---
 
