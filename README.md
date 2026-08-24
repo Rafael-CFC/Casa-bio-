@@ -15,7 +15,8 @@ index.html        Página inicial (hero, faixa da loja, áreas de atuação, nú
                   o equipamento e seus benefícios, como funciona, loja + Instagram, contato)
 servicos.html     Área de atuação detalhada: esgoto, água da chuva, bioconstrução
 produtos.html     Linha de produtos: estações de tratamento e cisternas
-projetos.html     Projetos de bioconstrução
+projetos.html     Lista dos projetos de bioconstrução
+projeto-chale-ecologico.html   Página do Chalé Ecológico (galeria + técnicas)
 contato.html      Contato, mapa, Instagram e perguntas frequentes
 
 assets/css/style.css   Todo o visual do site (cores, tipografia, layout)
@@ -100,12 +101,17 @@ novo com o mesmo nome** — não precisa mexer no HTML.
 | `estacao-instalada.jpg` | Hero da home e página de serviços | recorte do folheto — trocar pela foto digital |
 | `estacao-tratamento.jpg` | Seção do equipamento e os 4 cards de estação | recorte do folheto — trocar pela foto digital |
 | `esquema-sistema.jpg` | "Como funciona na sua casa" e serviços | recorte do folheto — trocar pela foto digital |
-| `casa-bioconstruida.jpg` | Galeria de bioconstrução na home | **placeholder** — aguardando a foto |
-| `pergolado-bambu.jpg` | Galeria de bioconstrução na home | **placeholder** — aguardando a foto |
-| `interior-terra.jpg` | Galeria de bioconstrução na home | **placeholder** — aguardando a foto |
+| `casa-bioconstruida.jpg` | Galeria de bioconstrução na home | **placeholder** |
+| `pergolado-bambu.jpg` | Galeria de bioconstrução na home | **placeholder** |
+| `interior-terra.jpg` | Galeria de bioconstrução na home | **placeholder** |
+| `chale-fachada.jpg` | Capa do Chalé (card, hero e galeria) | **placeholder** |
+| `chale-sala.jpg` | Galeria do Chalé — foto grande | **placeholder** |
+| `chale-quarto.jpg` | Galeria do Chalé | **placeholder** |
+| `chale-circulacao.jpg` | Galeria do Chalé | **placeholder** |
+| `chale-detalhe.jpg` | Galeria do Chalé | **placeholder** |
 
-Os três placeholders são imagens temporárias em verde com o texto
-"foto em breve". Assim que as fotos reais entrarem, a galeria fica pronta.
+Os placeholders são imagens temporárias em verde com o texto "foto em breve".
+Assim que as fotos reais entrarem com os mesmos nomes, tudo se ajusta sozinho.
 
 Formato recomendado: JPG, lado maior de 1600px, orientação paisagem.
 Se lembrar, atualize também o texto do `alt` no HTML — é o que descreve a foto
@@ -136,9 +142,17 @@ Produtos de cisterna devem ter também a classe `produto--agua` (deixa o card az
 
 ### 5. Projetos
 
-Em `projetos.html`, cada projeto é um bloco `<article class="projeto">`.
-Os seis atuais são: Chalé Ecológico, Casa Inspirulina, Morada Ekoa,
-Vivenda Viva, Pergolado de Bambu e Ekoa Surf Camp.
+`projetos.html` lista os seis projetos: Chalé Ecológico, Casa Inspirulina,
+Morada Ekoa, Vivenda Viva, Pergolado de Bambu e Ekoa Surf Camp.
+
+O **Chalé Ecológico** já tem página própria (`projeto-chale-ecologico.html`),
+com capa, ficha técnica, galeria de cinco fotos e os destaques construtivos.
+Ela serve de modelo para os outros cinco: copie o arquivo, renomeie, troque
+textos e nomes das fotos.
+
+Em `projetos.html`, um projeto sem página própria é um `<article class="projeto">`
+com ilustração; um projeto com página é um `<a href="..." class="projeto">` com
+foto na capa. Para promover um projeto, siga o padrão do Chalé.
 
 ---
 
