@@ -21,7 +21,8 @@ contato.html      Contato, mapa, Instagram e perguntas frequentes
 
 assets/css/style.css   Todo o visual do site (cores, tipografia, layout)
 assets/js/main.js      Menu mobile, animações, filtro de produtos, formulário
-assets/img/            Fotos do equipamento
+assets/img/            Fotos do site
+ferramentas/converter-fotos.py   Prepara fotos novas para o site
 ```
 
 ---
@@ -95,7 +96,24 @@ novo com o mesmo nome** — não precisa mexer no HTML.
 Os placeholders são imagens temporárias em verde com o texto "foto em breve".
 Assim que as fotos reais entrarem com os mesmos nomes, tudo se ajusta sozinho.
 
-Formato recomendado: JPG, lado maior de 1600px, orientação paisagem.
+#### Formato das fotos
+
+O site usa **JPG com no máximo 1600px no lado maior**. Não precisa preparar
+nada antes: mande as fotos como elas saem do celular — **AVIF, HEIC (iPhone),
+PNG, WEBP ou JPG** — e converta com:
+
+```bash
+python3 ferramentas/converter-fotos.py <pasta-com-as-fotos>
+```
+
+O script redimensiona, comprime, corrige a orientação (celular grava a rotação
+nos metadados em vez de girar a imagem) e já limpa o nome do arquivo:
+`Chalé Fachada.avif` vira `chale-fachada.jpg`. Rodar duas vezes não estraga
+nada — ele ignora o que já está pronto.
+
+Se as fotos forem HEIC e der erro, instale o suporte uma vez:
+`pip install pillow-heif`.
+
 Se lembrar, atualize também o texto do `alt` no HTML — é o que descreve a foto
 para quem usa leitor de tela e para o Google.
 
