@@ -82,17 +82,13 @@ em **todos os arquivos `.html`**:
 |---|---|
 | WhatsApp (link) | `5548991013968` |
 | WhatsApp (exibido) | `(48) 99101-3968` |
-| Instagram | `casabioconstrucao` |
+| Instagram | `casabio.construcao` |
 | Facebook | `casabioconstrucao` |
 | Loja | `CASAS ECO, próximo ao Komprão, no portal de entrada de Garopaba` |
 | Cidade | `Garopaba / SC` |
 
 O link do WhatsApp segue o formato `https://wa.me/55` + DDD + número, sem
 espaços nem símbolos.
-
-> ⚠️ **O perfil do Instagram precisa ser confirmado.** Usamos
-> `@casabioconstrucao` por ser o mesmo nome do Facebook e do domínio, mas não
-> foi possível verificar. Se o perfil for outro, troque nos cinco arquivos HTML.
 
 ### 3. Fotos
 
