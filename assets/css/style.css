@@ -1166,17 +1166,19 @@ strong { color: var(--tinta); font-weight: 600; }
 .ficha dt { font-size: .74rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--tinta-3); }
 .ficha dd { font-family: var(--fonte-titulo); font-size: 1.05rem; font-weight: 600; color: var(--verde-700); margin-top: 5px; }
 
-/* Galeria do projeto: uma foto grande + quatro menores */
+/* Galeria do projeto em mosaico: cada foto mantém a proporção original,
+   então fotos em pé e deitadas convivem sem corte nem buraco no layout. */
 .galeria--projeto {
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
+  display: block;
+  column-count: 3;
+  column-gap: 20px;
 }
-.galeria--projeto .foto { aspect-ratio: 4 / 3; }
-.galeria--projeto .foto:first-child {
-  grid-column: span 2;
-  grid-row: span 2;
+.galeria--projeto .foto {
+  break-inside: avoid;
+  margin: 0 0 20px;
   aspect-ratio: auto;
 }
+.galeria--projeto .foto img { height: auto; object-fit: fill; }
 
 /* Destaques construtivos */
 .tecnicas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -1205,13 +1207,11 @@ strong { color: var(--tinta); font-weight: 600; }
   .tecnicas { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 860px) {
-  .galeria--projeto { grid-template-columns: 1fr 1fr; }
-  .galeria--projeto .foto:first-child { grid-column: span 2; grid-row: auto; aspect-ratio: 16 / 10; }
+  .galeria--projeto { column-count: 2; }
 }
 @media (max-width: 640px) {
   .tecnicas { grid-template-columns: 1fr; }
-  .galeria--projeto { grid-template-columns: 1fr; }
-  .galeria--projeto .foto:first-child { grid-column: auto; }
+  .galeria--projeto { column-count: 1; }
   .ficha { flex-direction: column; }
 }
 

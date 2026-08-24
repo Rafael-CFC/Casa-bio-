@@ -81,20 +81,30 @@ novo com o mesmo nome** — não precisa mexer no HTML.
 
 | Arquivo | Onde aparece | Situação |
 |---|---|---|
+| `chale-fachada.jpg` | Capa da página do Chalé e card em Projetos | ✅ |
+| `chale-frente.jpg` | Galeria do Chalé e galeria da home | ✅ |
+| `chale-sala.jpg` | Galeria do Chalé | ✅ |
+| `chale-estar.jpg` | Galeria do Chalé e galeria da home | ✅ |
+| `chale-quarto.jpg` | Galeria do Chalé | ✅ |
+| `chale-cozinha.jpg` | Galeria do Chalé | ✅ |
+| `chale-circulacao.jpg` | Galeria do Chalé | ✅ |
+| `chale-mezanino.jpg` | Galeria do Chalé | ✅ |
+| `chale-varanda.jpg` | Galeria do Chalé | ✅ |
+| `chale-detalhe.jpg` | Galeria do Chalé e galeria da home | ✅ |
+| `chale-obra-cordwood.jpg` | Seção "A obra por dentro" | ✅ |
+| `chale-obra-terra.jpg` | Seção "A obra por dentro" | ✅ |
+| `chale-obra-estrutura.jpg` | Seção "A obra por dentro" | ✅ |
 | `estacao-instalada.jpg` | Hero da home e página de serviços | recorte do folheto — trocar pela foto digital |
 | `estacao-tratamento.jpg` | Seção do equipamento e os 4 cards de estação | recorte do folheto — trocar pela foto digital |
 | `esquema-sistema.jpg` | "Como funciona na sua casa" e serviços | recorte do folheto — trocar pela foto digital |
-| `casa-bioconstruida.jpg` | Galeria de bioconstrução na home | **placeholder** |
-| `pergolado-bambu.jpg` | Galeria de bioconstrução na home | **placeholder** |
-| `interior-terra.jpg` | Galeria de bioconstrução na home | **placeholder** |
-| `chale-fachada.jpg` | Capa do Chalé (card, hero e galeria) | **placeholder** |
-| `chale-sala.jpg` | Galeria do Chalé — foto grande | **placeholder** |
-| `chale-quarto.jpg` | Galeria do Chalé | **placeholder** |
-| `chale-circulacao.jpg` | Galeria do Chalé | **placeholder** |
-| `chale-detalhe.jpg` | Galeria do Chalé | **placeholder** |
 
-Os placeholders são imagens temporárias em verde com o texto "foto em breve".
-Assim que as fotos reais entrarem com os mesmos nomes, tudo se ajusta sozinho.
+> ⚠️ **As fotos do Chalé vieram do site em Wix**, então têm no máximo 775px de
+> largura. Ficam boas no tamanho em que aparecem, mas são o limite: se houver
+> os arquivos originais da câmera ou do celular, vale trocar — o site aceita
+> até 1600px e fica mais nítido em telas grandes.
+
+A galeria de bioconstrução da home mostra hoje fotos do Chalé. Quando houver
+fotos de outros projetos, é só trocar o `src` e o `alt` de cada `<figure>`.
 
 #### Formato das fotos
 
