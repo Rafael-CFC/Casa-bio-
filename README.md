@@ -56,25 +56,7 @@ A marca no cabeçalho é um **SVG desenhado à mão** (pássaro sobre o círculo
 
 ## Como editar as coisas do dia a dia
 
-### 1. Os números da home
-
-Ficam na seção `<section class="secao numeros">` do `index.html`.
-Cada número está no atributo `data-contador`:
-
-```html
-<div class="numero__valor"><span data-contador="70">70</span><small>+</small></div>
-<p class="numero__rotulo">Sistemas executados</p>
-```
-
-Troque o valor dentro de `data-contador` **e** o número dentro do `<span>`
-(o segundo é o que aparece caso o JavaScript esteja desligado).
-
-> ⚠️ **Confirme estes valores antes de publicar.** Os quatro números são valores
-> de referência colocados como ponto de partida e precisam ser substituídos
-> pelos reais: sistemas executados (70), municípios atendidos (15),
-> pessoas atendidas (1.200) e litros tratados por dia (85.000).
-
-### 2. Contato, WhatsApp e Instagram
+### 1. Contato, WhatsApp e Instagram
 
 Os dados aparecem em todas as páginas. Para trocar, use "localizar e substituir"
 em **todos os arquivos `.html`**:
@@ -91,7 +73,7 @@ em **todos os arquivos `.html`**:
 O link do WhatsApp segue o formato `https://wa.me/55` + DDD + número, sem
 espaços nem símbolos.
 
-### 3. Fotos
+### 2. Fotos
 
 Todas ficam em `assets/img/`. **Para trocar qualquer uma, basta salvar o arquivo
 novo com o mesmo nome** — não precisa mexer no HTML.
@@ -126,7 +108,7 @@ fotos reais, dentro de `<div class="projeto__capa">` substitua o `<svg>` por:
 
 O CSS já recorta e ajusta a imagem automaticamente.
 
-### 4. Produtos
+### 3. Produtos
 
 Em `produtos.html`, cada produto é um bloco `<article class="produto">`.
 Para adicionar um novo, copie um bloco existente e ajuste:
@@ -140,7 +122,7 @@ Para adicionar um novo, copie um bloco existente e ajuste:
 
 Produtos de cisterna devem ter também a classe `produto--agua` (deixa o card azul).
 
-### 5. Projetos
+### 4. Projetos
 
 `projetos.html` lista os seis projetos: Chalé Ecológico, Casa Inspirulina,
 Morada Ekoa, Vivenda Viva, Pergolado de Bambu e Ekoa Surf Camp.
@@ -153,6 +135,17 @@ textos e nomes das fotos.
 Em `projetos.html`, um projeto sem página própria é um `<article class="projeto">`
 com ilustração; um projeto com página é um `<a href="..." class="projeto">` com
 foto na capa. Para promover um projeto, siga o padrão do Chalé.
+
+---
+
+## A seção de números
+
+A home teve uma seção de números (sistemas executados, municípios atendidos,
+pessoas atendidas, litros tratados por dia) que foi **removida a pedido do
+cliente**.
+
+Os estilos e a animação de contagem continuam no projeto, então dá para
+trazê-la de volta a qualquer momento sem refazer nada — é só pedir.
 
 ---
 
