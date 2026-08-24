@@ -6,20 +6,20 @@
 
 :root {
   /* Verde da marca */
-  --verde-900: #212a16;
-  --verde-800: #2e3b1e;
-  --verde-700: #445629;
-  --verde-600: #566b33;
-  --verde-500: #7a9448;
-  --verde-400: #9bb168;
-  --verde-100: #e8eedc;
-  --verde-50:  #f5f8ef;
+  --verde-900: #062b0c;
+  --verde-800: #0b3d14;
+  --verde-700: #14521e;
+  --verde-600: #1e6b29;
+  --verde-500: #3e8c46;
+  --verde-400: #6aa872;
+  --verde-100: #dff0e2;
+  --verde-50:  #f1f9f2;
 
   /* Dourado da marca */
-  --dourado-700: #96690e;
-  --dourado-600: #bd8515;
-  --dourado-500: #e3a82b;
-  --dourado-400: #f0c563;
+  --dourado-700: #96650f;
+  --dourado-600: #c9871a;
+  --dourado-500: #eda92e;
+  --dourado-400: #f5c15f;
   --dourado-100: #fbf1dc;
 
   /* Água / equipamento */
@@ -32,12 +32,12 @@
   --terra-500: #b9834e;
   --terra-100: #f6ecdf;
 
-  --areia:   #faf7f0;
+  --areia:   #f9f7f1;
   --branco:  #ffffff;
-  --tinta:   #1e2318;
-  --tinta-2: #4f5647;
-  --tinta-3: #838a7a;
-  --borda:   #e5e8dd;
+  --tinta:   #16231a;
+  --tinta-2: #47564b;
+  --tinta-3: #7d8a80;
+  --borda:   #dfe7e0;
 
   /* Tipografia */
   --fonte-titulo: "Outfit", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -189,13 +189,11 @@ strong { color: var(--tinta); font-weight: 600; }
   inset: 0 0 auto 0;
   height: var(--header-h);
   z-index: 100;
-  background: rgba(255, 255, 255, .82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid transparent;
-  transition: box-shadow var(--transicao), border-color var(--transicao);
+  background: var(--verde-900);
+  border-bottom: 1px solid rgba(237, 169, 46, .18);
+  transition: box-shadow var(--transicao), background-color var(--transicao);
 }
-.topo.rolado { border-bottom-color: var(--borda); box-shadow: var(--sombra-1); }
+.topo.rolado { box-shadow: 0 4px 20px rgba(6, 43, 12, .3); }
 
 .topo__interno {
   height: 100%;
@@ -208,28 +206,32 @@ strong { color: var(--tinta); font-weight: 600; }
 .logo { display: flex; align-items: center; gap: 11px; }
 .logo__marca { width: 40px; height: 40px; flex-shrink: 0; }
 .logo__texto { font-family: var(--fonte-titulo); line-height: 1.1; }
-.logo__nome { display: block; font-weight: 700; font-size: 1.16rem; color: var(--verde-800); letter-spacing: -.02em; }
-.logo__sub  { display: block; font-size: .62rem; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; color: var(--verde-500); }
+.logo__nome { display: block; font-weight: 600; font-size: 1.24rem; color: var(--dourado-500); letter-spacing: .06em; }
+.logo__sub  { display: block; font-size: .6rem; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; color: rgba(237, 169, 46, .72); }
 
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a {
   position: relative;
   padding: 9px 15px;
   border-radius: 8px;
-  font-size: .95rem;
+  font-family: var(--fonte-titulo);
+  font-size: .88rem;
   font-weight: 500;
-  color: var(--tinta-2);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--dourado-500);
   transition: color var(--transicao), background-color var(--transicao);
 }
-.nav a:hover { color: var(--verde-700); background: var(--verde-50); }
-.nav a.ativo { color: var(--verde-700); font-weight: 600; }
+.nav a:hover { color: var(--dourado-400); background: rgba(237, 169, 46, .12); }
+.nav a.ativo { color: var(--dourado-400); }
+/* traço acima do item ativo, como no site da marca */
 .nav a.ativo::after {
   content: "";
   position: absolute;
-  left: 15px; right: 15px; bottom: 2px;
+  left: 15px; right: 15px; top: 0;
   height: 2px;
   border-radius: 2px;
-  background: var(--verde-500);
+  background: var(--dourado-500);
 }
 
 /* Este botão pertence ao menu mobile; no desktop quem aparece é o de .topo__acoes */
@@ -239,11 +241,11 @@ strong { color: var(--tinta); font-weight: 600; }
 .topo__acoes .btn { padding: 12px 22px; font-size: .92rem; }
 
 .menu-btn { display: none; width: 44px; height: 44px; border-radius: 10px; align-items: center; justify-content: center; }
-.menu-btn:hover { background: var(--verde-50); }
+.menu-btn:hover { background: rgba(237, 169, 46, .14); }
 .menu-btn span {
   display: block;
   width: 22px; height: 2px;
-  background: var(--verde-800);
+  background: var(--dourado-500);
   border-radius: 2px;
   position: relative;
   transition: background-color var(--transicao);
@@ -252,7 +254,7 @@ strong { color: var(--tinta); font-weight: 600; }
   content: "";
   position: absolute; left: 0;
   width: 22px; height: 2px;
-  background: var(--verde-800);
+  background: var(--dourado-500);
   border-radius: 2px;
   transition: transform var(--transicao), top var(--transicao);
 }
@@ -960,9 +962,9 @@ strong { color: var(--tinta); font-weight: 600; }
     align-items: stretch;
     gap: 4px;
     padding: 18px 24px 26px;
-    background: #fff;
-    border-bottom: 1px solid var(--borda);
-    box-shadow: var(--sombra-2);
+    background: var(--verde-900);
+    border-bottom: 1px solid rgba(237, 169, 46, .2);
+    box-shadow: 0 12px 32px rgba(6, 43, 12, .4);
     transform: translateY(-12px);
     opacity: 0;
     visibility: hidden;

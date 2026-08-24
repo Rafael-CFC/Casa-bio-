@@ -27,17 +27,29 @@ assets/img/            Fotos do equipamento
 
 ## Identidade visual
 
-As cores vêm do material impresso da marca: **verde-oliva profundo + dourado**.
+As cores seguem o site da marca: **verde-floresta profundo + âmbar**.
 Estão todas no topo do `assets/css/style.css`, no bloco `:root` — mudando ali,
 muda no site inteiro.
 
 | Token | Cor | Onde aparece |
 |---|---|---|
-| `--verde-700` | `#445629` | Cor principal da marca, botões, títulos |
-| `--verde-900` | `#212a16` | Rodapé, fundos escuros |
-| `--dourado-500` | `#e3a82b` | Faixa da loja, selos de destaque, CTAs |
+| `--verde-900` | `#062b0c` | Cabeçalho, rodapé, fundos escuros |
+| `--verde-700` | `#14521e` | Botões e títulos |
+| `--dourado-500` | `#eda92e` | Logo, links do menu, faixa da loja, destaques |
 | `--agua-500` | `#3a7fa5` | Seções de água da chuva |
 | `--terra-500` | `#b9834e` | Seções de bioconstrução |
+
+### A logo
+
+A marca no cabeçalho é um **SVG desenhado à mão** (pássaro sobre o círculo
+âmbar), definido no HTML de cada página — busque por `class="logo__marca"`.
+
+> ⚠️ É uma **aproximação** do pássaro original, feita a partir de uma captura de
+> tela. Assim que houver o arquivo original da logo (SVG ou PNG com fundo
+> transparente), o ideal é substituir: salve como `assets/img/logo.svg` e troque
+> o bloco `<svg class="logo__marca">…</svg>` por
+> `<img class="logo__marca" src="assets/img/logo.svg" alt="CASABIO">`
+> nas cinco páginas.
 
 ---
 
@@ -84,18 +96,24 @@ espaços nem símbolos.
 
 ### 3. Fotos
 
-As fotos em `assets/img/` foram extraídas do folheto impresso, então têm a
-qualidade de uma foto de papel: dá para usar, mas **o ideal é substituir pelos
-arquivos digitais originais** assim que possível.
+Todas ficam em `assets/img/`. **Para trocar qualquer uma, basta salvar o arquivo
+novo com o mesmo nome** — não precisa mexer no HTML.
 
-| Arquivo | Onde aparece |
-|---|---|
-| `estacao-instalada.jpg` | Hero da home e página de serviços |
-| `estacao-tratamento.jpg` | Seção do equipamento e os 4 cards de estação |
-| `esquema-sistema.jpg` | "Como funciona na sua casa" e serviços |
+| Arquivo | Onde aparece | Situação |
+|---|---|---|
+| `estacao-instalada.jpg` | Hero da home e página de serviços | recorte do folheto — trocar pela foto digital |
+| `estacao-tratamento.jpg` | Seção do equipamento e os 4 cards de estação | recorte do folheto — trocar pela foto digital |
+| `esquema-sistema.jpg` | "Como funciona na sua casa" e serviços | recorte do folheto — trocar pela foto digital |
+| `casa-bioconstruida.jpg` | Galeria de bioconstrução na home | **placeholder** — aguardando a foto |
+| `pergolado-bambu.jpg` | Galeria de bioconstrução na home | **placeholder** — aguardando a foto |
+| `interior-terra.jpg` | Galeria de bioconstrução na home | **placeholder** — aguardando a foto |
 
-Para trocar, basta salvar o arquivo novo com o mesmo nome. Se o nome for
-diferente, atualize também o `src` no HTML.
+Os três placeholders são imagens temporárias em verde com o texto
+"foto em breve". Assim que as fotos reais entrarem, a galeria fica pronta.
+
+Formato recomendado: JPG, lado maior de 1600px, orientação paisagem.
+Se lembrar, atualize também o texto do `alt` no HTML — é o que descreve a foto
+para quem usa leitor de tela e para o Google.
 
 Os projetos de bioconstrução ainda usam ilustrações vetoriais. Para colocar
 fotos reais, dentro de `<div class="projeto__capa">` substitua o `<svg>` por:
