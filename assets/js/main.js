@@ -1,5 +1,5 @@
 /* =========================================================
-   BioCasa Soluções Ecológicas — scripts do site
+   CASABIO — scripts do site
    ========================================================= */
 (function () {
   'use strict';
@@ -148,7 +148,7 @@
       var interesse = (dados.get('interesse') || '').toString().trim();
       var mensagem = (dados.get('mensagem') || '').toString().trim();
 
-      var linhas = ['Olá! Vim pelo site da BioCasa.', ''];
+      var linhas = ['Olá! Vim pelo site da CASABIO.', ''];
       if (nome) linhas.push('*Nome:* ' + nome);
       if (cidade) linhas.push('*Cidade:* ' + cidade);
       if (interesse) linhas.push('*Interesse:* ' + interesse);
